@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid" style="background-image: url(<%= @flat['imageUrl'] %>);
+background-position: center; background-size: cover;">
+  <div class="container py-5">
+  <% 10.times do %>
+  <br>
+  <% end %>
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1><%= @flat['name'] %></h1>
+            <h3><%= @flat["price"] %> <%= @flat["priceCurrency"] %></h3>
+            <%= link_to "Home", root_path, class:"btn btn-primary" %>
+        </div>
+        <div class="col-md-4">
+            <img src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-embassy+825(<%= @flat['lng'] %>,<%= @flat['lat'] %>)/<%= @flat['lng'] %>, <%= @flat['lat'] %>,14/600x600?access_token=pk.eyJ1IjoibmFydWhpbmEzMDAwIiwiYSI6ImNrb2M5eXB2bjBmbG4zMm4yaWJnN3h6cnUifQ.1Oa6u7HW26KhVpXVXvjD_w" alt="map" class="w-100">
+        </div>  
+    </div>
+</div>
